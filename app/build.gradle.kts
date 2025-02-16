@@ -6,12 +6,12 @@ plugins {
 
 android {
     namespace = "com.ztoais.jeeboomba"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.ztoais.jeeboomba"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -49,6 +49,9 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.camera.core)
+    implementation(libs.androidx.camera.lifecycle)
+    implementation(libs.androidx.camera.view)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -56,4 +59,47 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+        implementation(libs.androidx.core.ktx)
+        implementation(libs.androidx.lifecycle.runtime.ktx)
+        implementation(libs.androidx.activity.compose)
+        implementation(platform(libs.androidx.compose.bom))
+        implementation(libs.androidx.compose.ui)
+        implementation(libs.androidx.compose.ui.graphics)
+        implementation(libs.androidx.compose.ui.tooling.preview)
+        implementation(libs.androidx.compose.material)
+        implementation(libs.androidx.compose.material3)
+        implementation(libs.androidx.compose.foundation)
+        implementation(libs.mlkit.text.recognition)
+
+        // AI Face Animation (First Order Motion Model)
+       // implementation(libs.pytorch.android.lite)
+        //implementation(libs.pytorch.android.torchvision)
+
+    implementation(libs.litert)
+    implementation(libs.litert.support)
+    implementation(libs.litert.metadata)
+    implementation(libs.opencv)
+
+        // GStreamer for Multimedia Rendering
+        //implementation(libs.gstreamer)
+
+        // JSON Parsing
+        implementation(libs.gson)
+
+        // Kotlin Coroutines for async tasks
+        implementation(libs.coroutines)
+
+        // AI-based Text-to-Speech (TTS)
+        //implementation(libs.google.tts)
+    //implementation(libs.coqui.tts)
+
+    testImplementation(libs.junit)
+        androidTestImplementation(libs.androidx.junit)
+        androidTestImplementation(libs.androidx.espresso.core)
+        androidTestImplementation(platform(libs.androidx.compose.bom))
+        androidTestImplementation(libs.androidx.ui.test.junit4)
+        debugImplementation(libs.androidx.ui.tooling)
+        debugImplementation(libs.androidx.ui.test.manifest)
+
 }
